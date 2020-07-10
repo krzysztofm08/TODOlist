@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task list</title>
+    <meta name="description" content="Your list of tasks">
+    <meta name="author" content="Krzysztof Mącznik">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="Task_List_Style.css">
+</head>
+<body>
+    <div class="wrapTop">
+    <header>
+        <h1>Task list</h1>
+    </header>
+        <div class="weatherMain">
+        <h3>Weather for today</h3>
+            <div class="weatherTop">
+                <h3 class="cityName">City name</h3>
+                <p class="weatherError"></p>
+                <input class="cityTyped" type="text" placeholder="Type Your location here...">
+                <button class="weatherSend">Send</button>
+                <img src="weather/unknown.png" alt="Picture describing the weather" class="photo">
+            </div>
+            <div class="weatherBottom">
+                     <div>
+                        <p>Weather:</p>
+                        <p class="weather"></p>
+                     </div>
+                     <div>
+                        <p>Temperature:</p>
+                        <p class="temperature"></p>
+                     </div>
+                     <div>
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                     </div>  
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapBottom">
+
+        <div class="tasksMain">
+            <div class="tasksTop">
+                <h3>Your tasks :</h3>
+                <div class="tasksTopB">
+                <input type="text" class="todoInput" placeholder="Enter new task here...">
+                <button class="addTaskBtn">Add</button>
+                </div>
+                <p class="noTaskAlert">No tasks on the list</p>
+                <p class="noNameAlert">Enter the task name</p>
+           </div>
+            <ul class="listOfTasks">
+                <li class="listItem" id="0">First task<div class="tools"><button class="btnComplete"><i class="fas fa-check"></i></button><button class="btnEdit">Edit</button><button class="btnDelete"><i class="fas fa-times"></i></button></div></li>
+                <li class="listItem" id="1">Second task<div class="tools"><button class="btnComplete"><i class="fas fa-check"></i></button><button class="btnEdit">Edit</button><button class="btnDelete"><i class="fas fa-times"></i></button></div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup">
+        <div>
+            <h3 class="popuph3">Edit task :</h3>
+            <p class="popupInfo"></p>
+            <div>
+                <p class="noInputNameAlert">Enter the edited task name</p>
+                    <div></div>
+                    <input type="text" class="popupInput" placeholder="Insert task name...">
+                    <button class="popupAccept">Accept</button>
+                    <button class="popupCancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type= "text/javascript" src="Task_List_JS.js"></script>
+</body>
+</html>
